@@ -76,6 +76,19 @@ export default {
       this.$refs.loginForm.validate((isOk, obj) => {
         if (isOk) {
           this.$message({ type: 'success', message: '成功', showClose: true, duration: 3000 })
+          this.$axios({
+            url: 'authorizations',
+            method: 'post',
+            data: {
+              mobile: this.ruleForm.phoneNum,
+              code: this.ruleForm.code
+            }
+          }).then(result => {
+            console.log(result.data.data.token)
+            window.localStorage.setItem('user-token', result.data.data.token)
+            // 编程式导航
+            this.$router.push('/home')
+          }).catch(() => { this.$message({ type: 'warning', message: '账户或者密码有误' }) })
         } else {
           this.$message({ type: 'warning', message: '失败', showClose: true, duration: 5000 })
           // this.$message({ type: 'warning', message: '失败', showClose: true, duration: 5000 })

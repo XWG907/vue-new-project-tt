@@ -13,8 +13,8 @@ axios.defaults.baseURL = 'http://ttapi.research.itcast.cn/mp/v1_0'// 赋值基�
 Vue.config.productionTip = false
 Vue.use(ElementUI) // 全局注册ElementUI组件 任意位置都可以使用
 // 将原有的message替换成引入的message
-// 调用方式vue.$message.error / warning / success / info('hello')或者this, $message.error({ message: 'hello' })
-Vue.prototype.$message = message
+// 调用方式vue.$message.error / warning / success / info('hello')或者this. $message.error({ message: 'hello' })
+Vue.prototype.$message = message// 给Vue原型属性赋值,所有vue都可以直接this.$message调用
 
 Vue.prototype.$axios = axios // 给Vue原型属性赋值  所有vue实例自动拥有$axios
 

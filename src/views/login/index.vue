@@ -83,6 +83,7 @@ export default {
               code: this.ruleForm.code
             }
           }).then(result => {
+            console.log(result)
             this.$message({ type: 'success', message: '成功', showClose: true, duration: 1000 })
             // console.log(result.data.data.token)
             window.localStorage.setItem('user-token', result.data.data.token)

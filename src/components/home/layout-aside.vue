@@ -3,8 +3,8 @@
   <div>
     <!-- 官网图标背景图片  -->
     <img src="../../assets/img/logo_admin.png" alt />
-    <el-menu background-color="#323745" text-color="#adafb5">
-      <el-menu-item>
+    <el-menu background-color="#323745" text-color="#adafb5" :router="true">
+      <el-menu-item index="/">
         <template slot="title">
           <i class="el-icon-s-home"></i>
           <span>首页</span>
@@ -17,10 +17,10 @@
           <span>内容管理</span>
         </template>
         <el-menu-item-group>
-          <el-menu-item>发布文章</el-menu-item>
-          <el-menu-item>内容列表</el-menu-item>
-          <el-menu-item>内容列表</el-menu-item>
-          <el-menu-item>内容列表</el-menu-item>
+          <el-menu-item index="/publish">发布文章</el-menu-item>
+          <el-menu-item index="/articles">内容列表</el-menu-item>
+          <el-menu-item index="/comment">评价管理</el-menu-item>
+          <el-menu-item index="/material">素材管理</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
 

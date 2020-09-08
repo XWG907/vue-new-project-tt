@@ -91,7 +91,7 @@ export default {
     img{
       border-radius: 50%;
       margin-right: 10px;
-      width: 40px;
+      width: 35px;
     }
   }
 </style>

@@ -13,7 +13,9 @@
         <layout-header></layout-header>
       </el-header>
       <!-- 主体 -->
-      <el-main>主体</el-main>
+      <el-main style="padding : 0">
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -32,6 +34,7 @@ export default {
 <style lang="less" scoped>
 .el-aside {
   width: 200px !important;
+  background-color: #323745;
 }
 // 头部栏
 .el-header {
